@@ -1,0 +1,16 @@
+# Environment
+.venv/
+.env
+
+# Lecture files are their own git repo (clone, don't commit)
+lecture-files/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.claude/
+.vscode/
