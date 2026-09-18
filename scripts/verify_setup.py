@@ -1,6 +1,7 @@
 """Check that the course environment matches the Week 2b setup guide.
 
-Run with:  uv run python scripts/verify_setup.py
+Run with:  uv run python scripts/verify_setup.py 
+testing commmit name
 """
 
 import os
