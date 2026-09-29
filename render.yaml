@@ -1,0 +1,21 @@
+# Render Blueprint: deploys W03b/support_agent as a free web service.
+# Render dashboard -> New -> Blueprint -> pick this repo -> enter GOOGLE_API_KEY -> Apply.
+services:
+  - type: web
+    name: husky-tech-support
+    runtime: python
+    plan: free
+    rootDir: W03b/support_agent
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.9
+      # Gradio listens on 127.0.0.1:7860 by default; Render needs 0.0.0.0 on its PORT (10000).
+      - key: GRADIO_SERVER_NAME
+        value: 0.0.0.0
+      - key: GRADIO_SERVER_PORT
+        value: "10000"
+      # Secret: Render asks for the value when the Blueprint is applied.
+      - key: GOOGLE_API_KEY
+        sync: false
