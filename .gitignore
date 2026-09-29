@@ -5,6 +5,10 @@
 # Lecture files are their own git repo (clone, don't commit)
 lecture-files/
 
+# Graded assignments (DADA1, DADA2, ...) live in their own PRIVATE repos.
+# This repo is public: a solution pushed here is an academic-integrity violation.
+/DADA*/
+
 # Python
 __pycache__/
 *.py[cod]
